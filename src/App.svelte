@@ -1,5 +1,6 @@
 <script>
 	let activeColor = 'original'
+	let shakeIt = false;
 
 	const colors = [
 		'original',
@@ -11,6 +12,14 @@
 	function chooseAColor() {
 		activeColor = colors[Math.floor(Math.random() * colors.length)];
 	}
+
+	function handleWucky() {
+		shakeIt = true;
+
+		setTimeout(() => {
+			shakeIt = false;
+		}, 1000)
+	}
 </script>
 
 <svelte:head>
@@ -19,7 +28,7 @@
 
 <main class={activeColor}>
 	<div class="labels">
-		<h2 on:click={chooseAColor}>Wucky me!</h2>
+		<h2 on:click={handleWucky}>Wucky me!</h2>
 		<h3>instant</h3>
 		<h1>Cancit</h1>
 		<h1>Panton</h1>
@@ -28,7 +37,7 @@
 		<div class="andrei">a site by <a href="https://fb.me/ughndrei" target="_blank">andreitrinidad</a></div>
 	</div>
 
-	<div class="pic">
+	<div class="pic {shakeIt && 'pic--animate'}">
 		<img src="./cancit.png" alt="">
 	</div>
 </main>
@@ -69,6 +78,21 @@
 		@media (min-width: #{$desktop-width}) {
 			@content;
 		}
+	}
+
+	//animations
+	@keyframes shake {
+		0% { transform: translate(1px, 1px) rotate(0deg); }
+		10% { transform: translate(-1px, -2px) rotate(-1deg); }
+		20% { transform: translate(-3px, 0px) rotate(1deg); }
+		30% { transform: translate(3px, 2px) rotate(0deg); }
+		40% { transform: translate(1px, -1px) rotate(1deg); }
+		50% { transform: translate(-1px, 2px) rotate(-1deg); }
+		60% { transform: translate(-3px, 1px) rotate(0deg); }
+		70% { transform: translate(3px, 1px) rotate(-1deg); }
+		80% { transform: translate(-1px, -1px) rotate(1deg); }
+		90% { transform: translate(1px, 2px) rotate(0deg); }
+		100% { transform: translate(1px, -2px) rotate(-1deg); }
 	}
 
 	
@@ -275,6 +299,10 @@
 
 			img {
 				width: 100%
+			}
+
+			&--animate {
+				animation: shake 1s ease-in-out;
 			}
 		}
 
