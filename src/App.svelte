@@ -1,13 +1,13 @@
 <script>
-	let activeColor = 'original'
-	let shakeIt = false;
-
 	const colors = [
 		'original',
 		'sweet',
 		'calamansi',
 		'spicy'	
 	];
+
+	let activeColor = colors[Math.floor(Math.random() * colors.length)];
+	let shakeIt = false;
 
 	function chooseAColor() {
 		activeColor = colors[Math.floor(Math.random() * colors.length)];
@@ -316,7 +316,7 @@
 		&.sweet {
 			background-image: linear-gradient(to left, #e65d15, #efbf39);
 			.flavor {
-				color: #e65d15;
+				color: #efbf39;
 			}
 		}
 
@@ -332,16 +332,14 @@
 				color: $white;
 			}
 
-			.flavor {
-				color: $white;
+			p > span {
+				color: $white !important;
 			}
-		}
-	}
 
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+			.flavor {
+				color: $black;
+				background: $white;
+			}
 		}
 	}
 </style>
