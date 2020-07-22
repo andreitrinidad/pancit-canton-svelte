@@ -138,7 +138,7 @@
 		.labels {
 			margin-top: 50px;
 			transform: scale(.75);
-			z-index: 2;
+			// z-index: 2;
 			
 			@include tablet {
 				transform: scale(1);
@@ -238,9 +238,11 @@
 			}
 
 			.andrei {
+				position: relative;
 				font-family: 'Courier New', Courier, monospace;
 				font-weight: bold;
 				margin-top: 50px;
+				// background-color: salmon;
 
 				> a {
 					color: unset;
@@ -248,9 +250,8 @@
 
 				@include desktop {
 					margin-top: 50px;
-					position: absolute;
-					bottom: 50px;
-				
+					// position: absolute;
+					// bottom: 50px;
 				}
 	
 			}
