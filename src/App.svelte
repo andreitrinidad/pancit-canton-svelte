@@ -135,9 +135,11 @@
 
 
 		.labels {
-			margin-top: 50px; 
+			margin-top: 50px;
+			transform: scale(.75);
 			
 			@include tablet {
+				transform: scale(1);
 			}
 
 			@include desktop {
