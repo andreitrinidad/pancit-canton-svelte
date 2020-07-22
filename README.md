@@ -1,6 +1,6 @@
 # Cancit Panton
 
-Build with Svelte 💯
+Built with Svelte 💯
 
 
 ## Get started
