@@ -117,6 +117,7 @@
 			background: $black;
 			width: 100%;
 			height: 25px;
+			z-index: 3;
 
 			@include tablet {
 				top: 0;
@@ -137,6 +138,7 @@
 		.labels {
 			margin-top: 50px;
 			transform: scale(.75);
+			z-index: 2;
 			
 			@include tablet {
 				transform: scale(1);
@@ -259,6 +261,7 @@
 			right: 0;
 			bottom: -10px;
 			width: 80vw;
+			z-index: 1;
 
 			@include tablet {
 				width: 60vw;
