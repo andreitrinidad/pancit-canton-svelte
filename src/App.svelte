@@ -23,6 +23,7 @@
 </script>
 
 <svelte:head>
+	<title>Cancit Panton | Andrei Trinidad</title>
 	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </svelte:head>
 
