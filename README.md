@@ -2,6 +2,8 @@
 
 Built with Svelte 💯
 
+[Live site](https://wuckyme.netlify.app/)
+
 
 ## Get started
 
